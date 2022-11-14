@@ -20,7 +20,8 @@ const defaultUserContext: UserContextType = {
   user: {
     id: 0,
     username: "",
-    email: "",
+    email: null,
+    UserProfile: null,
   },
   signup: async (signupInfo) => {},
   login: async (loginInfo) => {},
