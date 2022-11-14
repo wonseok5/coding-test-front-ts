@@ -26,21 +26,19 @@ const ArticlesPage = () => {
     });
     setArticles((prev) => [...prev, ...articles]);
   }, []);
-  const loadMore = useCallback(async () => {
-    await getArticles(10, articles[articles.length - 1].id);
-  }, [articles, getArticles]);
+
   useEffect(() => {
     (async () => {
       await getArticles(10, 0);
     })();
   }, []);
+
   return (
     <Layout>
       <Container>
         {articles.map((article) => (
           <ArticleItem key={article.id} article={article} />
         ))}
-        <LoadMore onClick={loadMore}>더 불러오기</LoadMore>
       </Container>
     </Layout>
   );

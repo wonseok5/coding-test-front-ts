@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </MainButton>
         </>
       ) : (
-        <UserAuth isLogin={true} />
+        <UserAuth />
       )}
     </Layout>
   );
