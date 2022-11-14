@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useCallback, useContext, useMemo } from "react";
+import { useCallback, useContext, useMemo, useState } from "react";
 import Layout from "../components/Layout";
 import UserAuth from "../components/UserAuth";
 import UserInfo from "../components/UserInfo";
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
     },
     [router]
   );
+
   return (
     <Layout>
       {isLoggedIn ? (
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
           </MainButton>
         </>
       ) : (
-        <UserAuth />
+        <UserAuth isLogIn={true} />
       )}
     </Layout>
   );

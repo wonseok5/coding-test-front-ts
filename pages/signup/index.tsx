@@ -6,7 +6,7 @@ import UserAuth from "../../components/UserAuth";
 const SignupScreeen = () => {
   return (
     <Layout>
-      <UserAuth isLogin={false} />
+      <UserAuth isLogIn={false} />
     </Layout>
   );
 };
